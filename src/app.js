@@ -11,9 +11,13 @@ mongoose.connect('mongodb://chad:nelschads123@ds064718.mlab.com:64718/nodestore'
 
 //Carrega models
 const Product = require('./models/products');
+const Customer = require('./models/customer');
+const Order = require('./models/order');
+
 //Carrega routas
 const indexRoute = require('./routes/index-route');
 const productsRoute = require('./routes/products-route');
+const customerRoute = require('./routes/customer-route');
 
 //Uso do body-parser 
 app.use(bodyParser.json());
@@ -21,5 +25,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', indexRoute); //publica a routa
 app.use('/products', productsRoute); //publica a routa
+app.use('/customers', customerRoute); //publica a routa
+
 
 module.exports = app; 

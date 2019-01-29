@@ -4,7 +4,7 @@ const http = require('http');
 const debug = require('debug')('nodestr:server');
 
 //const port = 3000; //uma porta
-var port = normalizePort(process.env.PORT || '8080'); //Usa a funcao normalizePort
+var port = normalizePort(process.env.PORT || '3000'); //Usa a funcao normalizePort
 app.set('port', port); //seta a porta no objecto app
 
 const server = http.createServer(app); //cria um servidor baseiado no objecto app
