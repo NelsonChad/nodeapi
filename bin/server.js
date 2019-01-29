@@ -13,7 +13,7 @@ server.listen(port) //inicia o servidor escutando na porta
 server.on('error',onError); //executa a funcao onError para checar erros
 server.on('listening', onListening ) //executa a funcao onListening para fazer o debug
 
-console.log('API rodando na porta: '+ port);
+console.log('Servidor iniciado e API rodando na porta: '+ port);
 
 // Normalize a port into a number, string, or false. (Gerada pelo express)
 function normalizePort(val) {
