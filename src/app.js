@@ -18,6 +18,7 @@ const Order = require('./models/order');
 const indexRoute = require('./routes/index-route');
 const productsRoute = require('./routes/products-route');
 const customerRoute = require('./routes/customer-route');
+const orderRoute = require('./routes/order-route');
 
 //Uso do body-parser 
 app.use(bodyParser.json());
@@ -26,6 +27,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', indexRoute); //publica a routa
 app.use('/products', productsRoute); //publica a routa
 app.use('/customers', customerRoute); //publica a routa
+app.use('/orders', orderRoute);
 
 
 module.exports = app; 
